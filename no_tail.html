@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Mouse Identification Tool</title>
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <link rel="icon" href="images/mouse_icon.jpg">
+
+</head>
+
+<body>
+  <div class="mainpage">
+  	<header class="row">
+      <div class="col-12">
+  		  <a href="index.html"><img class="topbar_lg" src="images/topbar_lg.jpg" title="Home" alt="header bar image"></a>
+        <a href="index.html"><img class="topbar_sm" src="images/topbar_sm.jpg" title="Home" alt="header bar image"></a>
+      </div>
+    </header>
+
+    <div class="row">  
+        <nav class="col-3">
+          <ul>
+            <li><a href="index.html">With Tail Diameter</a></li>
+            <li><a href="no_tail.html" class="selected">Without Tail Diameter</a></li>
+          </ul>
+        </nav>
+
+        <div class="col-9">
+          <article>
+            <h2 class="title">Multiple Logistic Regression without Tail Diameter</h2>
+            <form>
+              <div class="row">
+                <div class="col-4">
+                  <label for="tlength">Tail Length (mm):</label>
+                </div>
+                <div class="col-8">
+                  <input type="number" id="tailLength">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="blength">Body Length (mm):</label>
+                </div>
+                <div class="col-8">
+                  <input type="number" id="bodyLength">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="sex">Sex:</label>
+                </div>
+                <div class="col-8">
+                  <select id="sexMF">
+                    <option value="1">Female</option>
+                    <option value="0">Male</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="repro">Reproductive Status:</label>
+                </div>
+                <div class="col-8">
+                  <select id="reproStat">
+                    <option value="1">Reproductive</option>
+                    <option value="2">Non-reproductive</option>
+                  </select>
+                </div>
+              </div>
+              <br>
+              <input class="button" type="button" name="calculate" value="Calculate" onClick="calcNoDiam();">
+              <br>
+              <br>
+              <div class="result_area">
+                <p id="result"></p>
+                <p id="species"></p>
+                <p id="prob"></p>
+              </div>
+            </form>
+          </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="col-3">
+          <a class="about" href="about.html">About</a>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <img class="logo" src="images/cdfw_logo.png" title="California Department of Fish and Wildlife" alt="California Department of Fish and Wildlife logo">
+          <img class="logo" src="images/csusm_logo.png" title="California State University San Marcos" alt="California State University San Marcos logo">
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/calculator.js"></script>
+  	
+
+</body>
+</html>
